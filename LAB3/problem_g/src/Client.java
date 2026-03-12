@@ -9,11 +9,12 @@ import java.util.Scanner;
  */
 public class Client {
     public static void main() {
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
         // Get start and finish points
-        Ponto start = new Ponto(sc.nextDouble(), sc.nextDouble());
-        Ponto finish = new Ponto(sc.nextDouble(), sc.nextDouble());
+        Point start = new Point(sc.nextDouble(), sc.nextDouble());
+        Point finish = new Point(sc.nextDouble(), sc.nextDouble());
         Vetor r = new Vetor(finish).sub(new Vetor(start));
 
         // Get wind speed and direction

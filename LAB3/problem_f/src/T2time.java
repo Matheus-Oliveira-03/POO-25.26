@@ -1,3 +1,5 @@
+package src;
+
 public class T2time {
     public static final int T2DAYSECONDS = 13 * 3600 + 27 * 60 + 16; // =48436 sec/day
     public static final String TIMEFORMAT = "[0-9]{2}:[0-9]{2}:[0-9]{2}";
