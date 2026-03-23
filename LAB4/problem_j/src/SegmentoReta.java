@@ -57,6 +57,10 @@ public class SegmentoReta {
         return this.b;
     }
 
+    public double length() {
+        return a.distanceTo(b);
+    }
+
     public String toString() {
         return "sr(" + this.a.toString() + ";" + this.b.toString() + ")";
     }
@@ -65,7 +69,13 @@ public class SegmentoReta {
      * @return a {@code Vector} representing the vector from A to B
      */
     public static Vector directionVector(Point A, Point B) {
-        return new Vector(B.x() - A.x(), B.y() - A.y());
+        Vector d = null;
+        try {
+            d = new Vector(B.x() - A.x(), B.y() - A.y());
+        } catch (Exception e) {
+            Helper.ivExit(e.getMessage());
+        }
+        return d;
     }
 
     /**
@@ -73,6 +83,10 @@ public class SegmentoReta {
      */
     public Vector directionVector() {
         return SegmentoReta.directionVector(a, b);
+    }
+
+    public Point getPoint(double t) {
+        return directionVector().transform(a, t);
     }
 
     // #endregion
@@ -120,9 +134,13 @@ public class SegmentoReta {
         double u = i.y();
 
         if ((0 <= t && t <= 1) && (0 <= u && u <= 1))
-            return directionVector().transform(a, t);
+            return getPoint(t);
 
         return null;
+    }
+
+    public Point intersect(SegmentoReta sr) {
+        return intersect(sr.a(), sr.b());
     }
 
     // #endregion

@@ -7,15 +7,12 @@ import java.util.List;
  * @inv
  */
 public class Route {
-    private final String ERR_MSG = "Route.iv";
     private List<Point> points;
-
-    public Route() {
-        this.points = new ArrayList<Point>();
-    }
+    private List<SegmentoReta> segments;
 
     public Route(ArrayList<Point> points) {
         this.points = points;
+        this.segments = segments();
     }
 
     public List<Point> points() {
@@ -32,18 +29,44 @@ public class Route {
         return length;
     }
 
+    private List<SegmentoReta> segments() {
+        if (this.points.size() < 2)
+            Helper.ivExit("Rota:iv");
+        List<SegmentoReta> segments = new ArrayList<SegmentoReta>();
+        for (int i = 0; i < this.points.size() - 1; i++) {
+            try {
+                segments.add(new SegmentoReta(this.points.get(i), this.points.get(i + 1)));
+            } catch (Exception e) {
+                Helper.ivExit(e.getMessage());
+            }
+        }
+
+        return segments;
+    }
+
     public List<Point> intersect(SegmentoReta sr) {
         List<Point> intersections = new ArrayList<Point>();
-        int i = 0;
-        while (i < points.size() - 1) {
-            try {
-                Point p = new SegmentoReta(points.get(i), points.get(++i)).intersect(sr.a(), sr.b());
-                if (p != null)
-                    intersections.add(p);
 
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                System.exit(0);
+        for (SegmentoReta segment : segments) {
+            Point intersection = segment.intersect(sr);
+            if (intersection != null && !intersections.contains(intersection))
+                intersections.add(intersection);
+        }
+
+        return intersections.isEmpty() ? null : intersections;
+    }
+
+    public List<Point> intersect(Shape shape) {
+        List<Point> intersections = new ArrayList<Point>();
+        for (SegmentoReta segment : segments) {
+            List<Point> intersectionsWithP = shape.intersect(segment);
+            if (intersectionsWithP == null)
+                continue;
+
+            intersectionsWithP.sort(Point.compareToRef(segment.a()));
+            for (Point intersection : intersectionsWithP) {
+                if (!intersections.contains(intersection))
+                    intersections.add(intersection);
             }
         }
 
@@ -51,38 +74,6 @@ public class Route {
     }
 
     public String toString() {
-        return toString(this.points);
-    }
-
-    public static String toString(Route r) {
-        return toString(r.points);
-    }
-
-    public static String toString(List<Point> points) {
-        if (points == null)
-            return null;
-
-        String str = "";
-        for (Point point : points) {
-            str += point;
-        }
-
-        return str;
-    }
-
-    private void checkInvariant() {
-        if (points.size() < 2)
-            invariantExit();
-
-        int i = 0;
-        while (i < points.size() - 1) {
-            if (points.get(i).equals(points.get(++i)))
-                invariantExit();
-        }
-    }
-
-    private void invariantExit() {
-        System.out.println(ERR_MSG);
-        System.exit(0);
+        return Helper.pointsToString(this.points);
     }
 }

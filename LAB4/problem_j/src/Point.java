@@ -1,3 +1,5 @@
+import java.util.Comparator;
+import java.util.Objects;
 import java.util.function.BinaryOperator;
 
 /**
@@ -6,7 +8,7 @@ import java.util.function.BinaryOperator;
  * @author Matheus Martins Oliveira | a85794
  * @version 3.0 | 27/02/2026
  */
-public class Point {
+public class Point implements Comparable<Point> {
     public static Point ORIGIN = new Point(0, 0);
     private double x;
     private double y;
@@ -36,15 +38,20 @@ public class Point {
         return this.y;
     }
 
+    public Point calculator(double scalar, Point p, BinaryOperator<Double> operator) {
+        Point scaled = this.calculator(scalar, (m, n) -> m * n);
+        return scaled.calculator(p, operator);
+    }
+
     /**
-     * @param x        an {@code double} representing a scalar
+     * @param scalar   an {@code double} representing a scalar
      * @param operator an {@code BinaryOperator<Double>} representing the operation
      *                 between the scalar and this
      * @return a {@code Point} resulting of the scalar being aplied by the operation
      *         to each of this point values
      */
-    public Point calculator(double x, BinaryOperator<Double> operator) {
-        return calculator(new Point(x, x), operator);
+    public Point calculator(double scalar, BinaryOperator<Double> operator) {
+        return calculator(new Point(scalar, scalar), operator);
     }
 
     /**
@@ -90,24 +97,38 @@ public class Point {
      * @return {@code true} if the points are equal to each other (this.x() ==
      *         p-x(), this.y() == p.y())
      */
-    public boolean equals(Point p) {
-        double xx = Math.abs(this.x() - p.x());
-        double yy = Math.abs(this.y() - p.y());
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof Point))
+            return false;
 
-        return xx < 1e-9 && yy < 1e-9;
+        Point p = (Point) o;
+        return Double.compare(this.x(), p.x()) == 0 && Double.compare(this.y(), p.y()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.x(), this.y());
     }
 
     /**
      * @param p an {@code Point} representing the point which will be compared to
      *          this one regarding the distance to the origin (0, 0)
-     * @return {@code -1} If the given point p is closer to the origin<br>
+     * @return {@code -1} If this is closer to the origin<br>
      *         {@code 0} If both are at the same distance to the origin<br>
-     *         {@code 1} If this is closer to the origin
+     *         {@code 1} If the given point p is closer to the origin
      */
+    @Override
     public int compareTo(Point p) {
-        double disA = this.norm();
-        double disB = p.norm();
-        return Math.abs(disA - disB) < 1e-9 ? 0 : disA < disB ? 1 : -1;
+        double disT = this.norm();
+        double disP = p.norm();
+        return Double.compare(disT, disP);
+    }
+
+    public static Comparator<Point> compareToRef(Point ref) {
+        return (p1, p2) -> Double.compare(p1.distanceTo(ref), p2.distanceTo(ref));
     }
 
     public String toString() {

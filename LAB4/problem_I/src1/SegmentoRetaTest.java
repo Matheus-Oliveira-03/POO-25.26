@@ -13,10 +13,8 @@ public class SegmentoRetaTest {
     @Test
     void testIntersect() {
         assertTrue(
-                new Point(1, 1).equals(
-                        new SegmentoReta(new Point(0, 1), new Point(4, 1)).intersect(Point.ORIGIN, new Vector(2, 2))));
-        assertEquals(null,
-                new SegmentoReta(new Point(4, 4), new Point(6, 6)).intersect(Point.ORIGIN, new Vector(2, 2)));
+                new Point(1, 1).equals(new SegmentoReta(new Point(0, 1), new Point(4, 1)).intersect(new Vector(2, 2))));
+        assertEquals(null, new SegmentoReta(new Point(4, 4), new Point(6, 6)).intersect(new Vector(2, 2)));
     }
 
     @Test
