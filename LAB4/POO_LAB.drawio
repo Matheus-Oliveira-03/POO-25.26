@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="2-Bm2srt1Tn0PAlcLDTf">
+    <mxGraphModel dx="1493" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TQG_ht8ffEfHsc23JEte-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Rectangle" vertex="1">
+          <mxGeometry height="110" width="340" x="540" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-4" parent="TQG_ht8ffEfHsc23JEte-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create» Rectangle(pts : List&amp;lt;Point&amp;gt;, ERR_MSG : String)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create» Rectangle(pts : List&amp;lt;Point&amp;gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;# «override» sizeCheck() : void&lt;/div&gt;# diagonalsCheck() : void&lt;div&gt;# edgesCheck() : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-3" parent="TQG_ht8ffEfHsc23JEte-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Square" vertex="1">
+          <mxGeometry height="80" width="240" x="540" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-7" parent="TQG_ht8ffEfHsc23JEte-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-8" parent="TQG_ht8ffEfHsc23JEte-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create» Square(pts : List&amp;lt;Point&amp;gt;)&lt;/span&gt;&lt;/div&gt;# «override» edgesCheck() : void" vertex="1">
+          <mxGeometry height="46" width="240" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Vector" vertex="1">
+          <mxGeometry height="340" width="280" x="840" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-10" parent="TQG_ht8ffEfHsc23JEte-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- ERR_MSG : String = &quot;Vetor:iv&quot; { readOnly }" vertex="1">
+          <mxGeometry height="26" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-11" parent="TQG_ht8ffEfHsc23JEte-9" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-12" parent="TQG_ht8ffEfHsc23JEte-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ «create» Vector(x : double, y : double)&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create»&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Vector(p : Point)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create»&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Vector(a : Point, b : Point)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create»&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Vector(sr : SegmentoReta)&lt;/span&gt;&lt;/div&gt;+ mult(d : double) : Vector&lt;div&gt;+ add(v : Vector) : Vector&lt;/div&gt;&lt;div&gt;+ sub(v : Vector) : Vector&lt;/div&gt;&lt;div&gt;+ transform(p : Point, s : double) : Point&lt;/div&gt;&lt;div&gt;+ transform(p : Point) : Point&lt;/div&gt;&lt;div&gt;+ internProduct(v : Vector) : double&lt;/div&gt;&lt;div&gt;+ cossineSimilarity(v : Vector) : double&lt;/div&gt;&lt;div&gt;+ crossProduct(v : Vector) : double&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ corssProduct(v : Vector, w : Vector) : double&lt;/u&gt;&lt;/div&gt;&lt;div&gt;+ intersect(sr : SegmentoReta) : Point&lt;/div&gt;&lt;div&gt;+ «override» equals() : boolean&lt;/div&gt;&lt;div&gt;+ «override» hashCode() : int&lt;/div&gt;&lt;div&gt;+ «override» toString() : String&lt;/div&gt;&lt;div&gt;- checkInvariants() : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SegmentoReta" vertex="1">
+          <mxGeometry height="340" width="280" x="1190" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-14" parent="TQG_ht8ffEfHsc23JEte-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- ERR_MSG : String { readOnly }&lt;div&gt;- a : Point&lt;/div&gt;&lt;div&gt;- b : Point&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-15" parent="TQG_ht8ffEfHsc23JEte-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-16" parent="TQG_ht8ffEfHsc23JEte-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ «create» SegmentoReta(p : Point, v : Vector)&lt;div&gt;+ «create» SegmentoReta(a : Point, b : Point)&lt;/div&gt;&lt;div&gt;+ a() : Point&lt;/div&gt;&lt;div&gt;+ b() : Point&lt;/div&gt;&lt;div&gt;+ length() : double&lt;/div&gt;&lt;div&gt;+ «override» toString() : String&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ directionVector(A : Point, B : Point) : Vector&lt;/u&gt;&lt;/div&gt;&lt;div&gt;+ directionVector() : Vector&lt;/div&gt;&lt;div&gt;+ getPoint(t : double) : Point&lt;/div&gt;&lt;div&gt;- scalars(C : Point, D : Point) : Point&lt;/div&gt;&lt;div&gt;+ intersect(C : Point, D : Point) : Point&lt;/div&gt;&lt;div&gt;+ intersect(p : Point, v : Vector) : Point&lt;/div&gt;&lt;div&gt;+ intersect(sr : SegmentoReta) : Point&lt;/div&gt;&lt;div&gt;+ «override» equals(o : Object) : boolean&lt;/div&gt;&lt;div&gt;+ «override» hashCode() : int&lt;/div&gt;&lt;div&gt;- checkInvariants() : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="252" width="280" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-17" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Point" vertex="1">
+          <mxGeometry height="290" width="460" x="840" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-18" parent="TQG_ht8ffEfHsc23JEte-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;u&gt;+ Origin : Point = (0, 0)&lt;/u&gt;&lt;div&gt;- x : double&lt;/div&gt;&lt;div&gt;- y : double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="460" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-19" parent="TQG_ht8ffEfHsc23JEte-17" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="460" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-20" parent="TQG_ht8ffEfHsc23JEte-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create»&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Point(x : double, y : double)&lt;/span&gt;&lt;/div&gt;+ x() : double&lt;div&gt;+ y() : double&lt;/div&gt;&lt;div&gt;+ calculator(p : Point, scalar : double, operator : BinaryOperator&amp;lt;Double&amp;gt;) : Point&lt;/div&gt;&lt;div&gt;+ calculator(scalar : double, operator : BinaryOperator&amp;lt;Double&amp;gt;) : Point&lt;/div&gt;&lt;div&gt;+ calculator(p : Point, operator : BinaryOperator&amp;lt;Double&amp;gt;) : Point&lt;/div&gt;&lt;div&gt;+ distanceTo(p : Point) : double&lt;/div&gt;&lt;div&gt;+ norm() : double&lt;/div&gt;&lt;div&gt;+ «override» equals() : boolean&lt;/div&gt;&lt;div&gt;+ «override» hashCode() : int&lt;/div&gt;&lt;div&gt;+ «override» comapreTo() : int&lt;/div&gt;&lt;div&gt;+ «override» toString() : String&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ compareToRef(ref : Point) : Comparator&amp;lt;Point&amp;gt;&lt;/u&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="202" width="460" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-21" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Triangle" vertex="1">
+          <mxGeometry height="100" width="220" x="990" y="361" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-22" parent="TQG_ht8ffEfHsc23JEte-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="4" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-23" parent="TQG_ht8ffEfHsc23JEte-21" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-24" parent="TQG_ht8ffEfHsc23JEte-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ «create» Triangle(pts: List&amp;lt;Point&amp;gt;)&lt;/div&gt;&lt;div&gt;# «override» sizeCheck() : void&lt;/div&gt;- colinearityCheck() : void" vertex="1">
+          <mxGeometry height="62" width="220" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-25" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AutoPilot" vertex="1">
+          <mxGeometry height="100" width="330" x="1165" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-27" parent="TQG_ht8ffEfHsc23JEte-25" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="330" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-28" parent="TQG_ht8ffEfHsc23JEte-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ «create» AutoPilot(start : Point, finish : Point)&lt;div&gt;+ time(windSpeed : Vector, linearSpeed : double) : double&lt;/div&gt;&lt;div&gt;+ speed(windSpeed : Vector, time : double) : Vector&lt;/div&gt;" vertex="1">
+          <mxGeometry height="66" width="330" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-29" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Poligon" vertex="1">
+          <mxGeometry height="190" width="320" x="560" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-30" parent="TQG_ht8ffEfHsc23JEte-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- ERR_MSG : String { readOnly }&lt;div&gt;- vertices : List&amp;lt;Point&amp;gt;&lt;/div&gt;&lt;div&gt;- edges : List&amp;lt;SegmentoReta&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="320" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-31" parent="TQG_ht8ffEfHsc23JEte-29" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-32" parent="TQG_ht8ffEfHsc23JEte-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create» Poligon(pts : List&amp;lt;Point&amp;gt;, ERR_MSG : String)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create» Poligon(pts : List&amp;lt;Point&amp;gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ intersect(sr : SegmentoReta) : List&amp;lt;Point&amp;gt;&lt;/div&gt;+ edges() : List&amp;lt;SegmentoReta&amp;gt;&lt;div&gt;+ «override» toString() : String&lt;/div&gt;&lt;div&gt;# sizeCheck() : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="102" width="320" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-33" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Circle" vertex="1">
+          <mxGeometry height="160" width="270" x="250" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-34" parent="TQG_ht8ffEfHsc23JEte-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- ERR_MSG : String = &quot;Circulo:iv&quot; { readOnly }&lt;div&gt;- center : Point&lt;/div&gt;&lt;div&gt;- radius : double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="270" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-35" parent="TQG_ht8ffEfHsc23JEte-33" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="270" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-36" parent="TQG_ht8ffEfHsc23JEte-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«create»&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Circle(center : Point, radius : double)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ intersect(sr : SegmentoReta) : List&amp;lt;Point&amp;gt;&lt;/div&gt;+ center() : Point&lt;div&gt;+ radius() : double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="270" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-38" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="« Helper »" vertex="1">
+          <mxGeometry height="180" width="280" x="110" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-39" parent="TQG_ht8ffEfHsc23JEte-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;u&gt;+ tolerance : double = 1e-9&lt;/u&gt;&lt;div&gt;&lt;u&gt;+ origin : Point = (0, 0)&lt;/u&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-40" parent="TQG_ht8ffEfHsc23JEte-38" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-41" parent="TQG_ht8ffEfHsc23JEte-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;u&gt;+ ivExit(ERR_MSG : String) : void&lt;/u&gt;&lt;div&gt;&lt;u&gt;+ genericPoint(s : double) : Point&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ genericCircle(s : double) : Circle&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ isZero(n : double) : boolean&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ tolerantEquals(a : double, b : double) : boolean&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ pointsToString(pts : List&amp;lt;Point&amp;gt;) : String&lt;/u&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="102" width="280" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-43" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Route" vertex="1">
+          <mxGeometry height="220" width="250" x="289" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-44" parent="TQG_ht8ffEfHsc23JEte-43" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- ERR_MSG : String { readOnly }&lt;div&gt;- points : List&amp;lt;Point&amp;gt;&lt;/div&gt;&lt;div&gt;- length : double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="250" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-45" parent="TQG_ht8ffEfHsc23JEte-43" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-46" parent="TQG_ht8ffEfHsc23JEte-43" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ «create» Route(pts : List&amp;lt;Point&amp;gt;)&lt;div&gt;+ points() : List&amp;lt;Points&amp;gt;&lt;/div&gt;&lt;div&gt;+ length() : double&lt;/div&gt;&lt;div&gt;+ segments() : List&amp;lt;SegmentoReta&amp;gt;&lt;/div&gt;&lt;div&gt;+ intersect(sr : SegmentoReta) : List&amp;lt;Point&amp;gt;&lt;/div&gt;&lt;div&gt;+ intersect(s : shape) : List&amp;lt;Point&amp;gt;&lt;/div&gt;&lt;div&gt;+ «override» toString() : String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="132" width="250" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-47" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Shape&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;+ intersect(sr : SegmentoReta) : List&amp;lt;Point&amp;gt;&lt;/i&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="250" x="430" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-48" edge="1" parent="1" source="TQG_ht8ffEfHsc23JEte-33" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="TQG_ht8ffEfHsc23JEte-47" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="490" y="220" as="sourcePoint" />
+            <mxPoint x="730" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-49" edge="1" parent="1" source="TQG_ht8ffEfHsc23JEte-29" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="TQG_ht8ffEfHsc23JEte-47" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="820" y="110" as="sourcePoint" />
+            <mxPoint x="980" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-53" edge="1" parent="1" source="TQG_ht8ffEfHsc23JEte-21" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" target="TQG_ht8ffEfHsc23JEte-29" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="640" y="360" as="sourcePoint" />
+            <mxPoint x="800" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-54" edge="1" parent="1" source="TQG_ht8ffEfHsc23JEte-1" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" target="TQG_ht8ffEfHsc23JEte-29" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="856" y="334" as="sourcePoint" />
+            <mxPoint x="818" y="284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-57" edge="1" parent="1" source="TQG_ht8ffEfHsc23JEte-5" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" target="TQG_ht8ffEfHsc23JEte-1" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="744" y="356" as="sourcePoint" />
+            <mxPoint x="772" y="304" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-58" edge="1" parent="1" source="TQG_ht8ffEfHsc23JEte-9" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" target="TQG_ht8ffEfHsc23JEte-17" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1039" y="371" as="sourcePoint" />
+            <mxPoint x="986" y="334" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TQG_ht8ffEfHsc23JEte-60" edge="1" parent="1" source="TQG_ht8ffEfHsc23JEte-25" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" target="TQG_ht8ffEfHsc23JEte-13" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1031" y="840" as="sourcePoint" />
+            <mxPoint x="1045" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
