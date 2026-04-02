@@ -1,3 +1,8 @@
+package geometry;
+
+import java.util.Objects;
+import main.Helper;
+
 /**
  * Represents a line-segment defined by two extrems
  * 
@@ -57,6 +62,10 @@ public class SegmentoReta {
         return this.b;
     }
 
+    public double length() {
+        return a.distanceTo(b);
+    }
+
     public String toString() {
         return "sr(" + this.a.toString() + ";" + this.b.toString() + ")";
     }
@@ -65,7 +74,13 @@ public class SegmentoReta {
      * @return a {@code Vector} representing the vector from A to B
      */
     public static Vector directionVector(Point A, Point B) {
-        return new Vector(B.x() - A.x(), B.y() - A.y());
+        Vector d = null;
+        try {
+            d = new Vector(B.x() - A.x(), B.y() - A.y());
+        } catch (Exception e) {
+            Helper.ivExit(e.getMessage());
+        }
+        return d;
     }
 
     /**
@@ -73,6 +88,10 @@ public class SegmentoReta {
      */
     public Vector directionVector() {
         return SegmentoReta.directionVector(a, b);
+    }
+
+    public Point getPoint(double t) {
+        return directionVector().transform(a, t);
     }
 
     // #endregion
@@ -120,14 +139,40 @@ public class SegmentoReta {
         double u = i.y();
 
         if ((0 <= t && t <= 1) && (0 <= u && u <= 1))
-            return directionVector().transform(a, t);
+            return getPoint(t);
 
         return null;
+    }
+
+    public Point intersect(SegmentoReta sr) {
+        return intersect(sr.a(), sr.b());
     }
 
     // #endregion
 
     // #region Checks
+
+    /**
+     * @param p an {@code Point} representing the point which will be compared to
+     *          this
+     * @return {@code true} if the points are equal to each other (this.x() ==
+     *         p-x(), this.y() == p.y())
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof SegmentoReta))
+            return false;
+
+        SegmentoReta sr = (SegmentoReta) o;
+        return this.a().equals(sr.a()) && this.b().equals(sr.b());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.a, this.b);
+    }
 
     /**
      * Checks the class' invariants validity <br>
@@ -139,7 +184,7 @@ public class SegmentoReta {
         if (!a.equals(b))
             return;
 
-        throw new IllegalArgumentException(ERR_MSG);
+        Helper.ivExit(ERR_MSG);
     }
 
     // #endregion
