@@ -148,7 +148,7 @@ public class Vector extends Point {
             return false;
 
         Vector p = (Vector) o;
-        return Helper.equals(this.x(), p.x()) && Helper.equals(this.y(), p.y());
+        return Helper.tolerantEquals(this.x(), p.x()) && Helper.tolerantEquals(this.y(), p.y());
     }
 
     @Override
@@ -158,19 +158,20 @@ public class Vector extends Point {
         return Objects.hash(xFixed, yFixed);
     }
 
+    @Override
+    public String toString() {
+        return String.format("[%.2f,%.2f]", this.x(), this.y());
+    }
+
     /**
      * Checks the class' invariants validity <br>
      * 
      * Exits the program with the mensage "Vetor:iv" if one of them is violated
      */
-    public void checkInvariants() {
+    private void checkInvariants() {
         if (Math.abs(this.norm()) > 1e-9)
             return;
 
-        throw new IllegalArgumentException(ERR_MSG);
-    }
-
-    public String toString() {
-        return String.format("[%.2f,%.2f]", this.x(), this.y());
+        Helper.ivExit(ERR_MSG);
     }
 }

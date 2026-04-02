@@ -79,24 +79,7 @@ public class Route {
         return intersections.isEmpty() ? null : intersections;
     }
 
-    /**
-     * @param p an {@code Point} representing the point which will be compared to
-     *          this
-     * @return {@code true} if the points are equal to each other (this.x() ==
-     *         p-x(), this.y() == p.y())
-     */
     @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof Route))
-            return false;
-
-        Route r = (Route) o;
-
-        return this.segments() == r.segments();
-    }
-
     public String toString() {
         return Helper.pointsToString(this.points);
     }

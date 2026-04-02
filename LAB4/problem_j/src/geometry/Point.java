@@ -7,7 +7,7 @@ import java.util.function.BinaryOperator;
 import main.Helper;
 
 /**
- * Represents a point with (x,y) coordinates
+ * Represents a point with (x,y) coordinates in a cartesian space
  * 
  * @author Matheus Martins Oliveira | a85794
  * @version 3.0 | 27/02/2026
@@ -109,7 +109,7 @@ public class Point implements Comparable<Point> {
             return false;
 
         Point p = (Point) o;
-        return Helper.equals(this.x(), p.x()) && Helper.equals(this.y(), p.y());
+        return Helper.tolerantEquals(this.x(), p.x()) && Helper.tolerantEquals(this.y(), p.y());
     }
 
     @Override
@@ -135,6 +135,7 @@ public class Point implements Comparable<Point> {
         return (p1, p2) -> Double.compare(p1.distanceTo(ref), p2.distanceTo(ref));
     }
 
+    @Override
     public String toString() {
         return String.format("(%.2f,%.2f)", this.x(), this.y());
     }

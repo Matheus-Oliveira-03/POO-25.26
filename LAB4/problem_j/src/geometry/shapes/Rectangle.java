@@ -27,7 +27,7 @@ public class Rectangle extends Poligon {
         double AC = this.vertices.get(0).distanceTo(this.vertices.get(2));
         double BD = this.vertices.get(1).distanceTo(this.vertices.get(3));
 
-        if (!Helper.equals(AC, BD))
+        if (!Helper.tolerantEquals(AC, BD))
             Helper.ivExit(ERR_MSG);
     }
 
@@ -37,7 +37,7 @@ public class Rectangle extends Poligon {
         double CD = this.vertices.get(2).distanceTo(this.vertices.get(3));
         double DA = this.vertices.get(3).distanceTo(this.vertices.get(0));
 
-        if (!Helper.equals(AB, CD) || !Helper.equals(BC, DA))
+        if (!Helper.tolerantEquals(AB, CD) || !Helper.tolerantEquals(BC, DA))
             Helper.ivExit(ERR_MSG);
     }
 }

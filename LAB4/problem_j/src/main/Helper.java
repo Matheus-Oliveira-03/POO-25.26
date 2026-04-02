@@ -5,8 +5,8 @@ import java.util.List;
 import geometry.Point;
 import geometry.shapes.Circle;
 
-public class Helper {
-    public static double zero = 1e-9;
+public abstract class Helper {
+    public static double tolerance = 1e-9;
     public static Point origin = new Point(0, 0);
 
     public static void ivExit(String ERR_MSG) {
@@ -24,10 +24,10 @@ public class Helper {
     }
 
     public static boolean isZero(double n) {
-        return Math.abs(n) < zero;
+        return Math.abs(n) < tolerance;
     }
 
-    public static boolean equals(double a, double b) {
+    public static boolean tolerantEquals(double a, double b) {
         return isZero(a - b);
     }
 

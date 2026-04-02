@@ -14,7 +14,7 @@ import geometry.*;
  * @author Matheus Martins Oliveira | a85794
  * @version 3.0 | 27/02/2026
  */
-public class Client {
+public abstract class Client {
     public static void main() {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

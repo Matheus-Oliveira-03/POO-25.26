@@ -8,7 +8,7 @@ import geometry.SegmentoReta;
 import main.Helper;
 
 public class Poligon implements Shape {
-    protected String ERR_MSG;
+    protected final String ERR_MSG;
     protected List<Point> vertices;
     protected List<SegmentoReta> edges;
 

@@ -14,7 +14,7 @@ public class Square extends Rectangle {
     @Override
     protected void edgesCheck() {
         for (SegmentoReta edge : edges) {
-            if (!Helper.equals(edge.length(), edges.getFirst().length()))
+            if (!Helper.tolerantEquals(edge.length(), edges.getFirst().length()))
                 Helper.ivExit(ERR_MSG);
         }
     }

@@ -3,9 +3,10 @@ package geometry.shapes;
 import java.util.ArrayList;
 import java.util.List;
 import geometry.*;
+import main.Helper;
 
 public class Circle implements Shape {
-    public static final String ERR_MSG = "Circulo:iv";
+    private final String ERR_MSG = "Circulo:iv";
     private Point center;
     private double radius;
 
@@ -14,8 +15,7 @@ public class Circle implements Shape {
         this.radius = radius;
 
         if (radius < 1e-9)
-            throw new IllegalArgumentException(ERR_MSG);
-        // Helper.ivExit(ERR_MSG);
+            Helper.ivExit(ERR_MSG);
     }
 
     public Point center() {

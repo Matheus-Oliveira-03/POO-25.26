@@ -66,6 +66,7 @@ public class SegmentoReta {
         return a.distanceTo(b);
     }
 
+    @Override
     public String toString() {
         return "sr(" + this.a.toString() + ";" + this.b.toString() + ")";
     }
