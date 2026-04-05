@@ -22,28 +22,11 @@ public class Rectangle extends Poligon {
      * @see #edgesCheck()
      * @see Helper#ivExit(String)
      */
-    public Rectangle(List<Point> pts, String ERR_MSG) {
-        super(pts, ERR_MSG);
+    public Rectangle(List<Point> pts) {
+        super(pts);
 
         diagonalCheck();
         edgesCheck();
-    }
-
-    /**
-     * Creates a Rectangle from a list of {@link Point} and with "Retangulo:iv" for
-     * error message.
-     * <hr>
-     * 
-     * @param pts : a {@code List<Point>} representing the vertices of the
-     *            rectangle.
-     * 
-     * @see #diagonalCheck()
-     * @see #Rectangle(List, String)
-     * @see #sizeCheck()
-     * @see Helper#ivExit(String)
-     */
-    public Rectangle(List<Point> pts) {
-        this(pts, "Retangulo:iv");
     }
 
     /**
@@ -55,7 +38,7 @@ public class Rectangle extends Poligon {
     @Override
     protected void sizeCheck() {
         if (vertices.size() != 4)
-            Helper.ivExit(ERR_MSG);
+            Helper.ivExit(ERR_MSG());
     }
 
     /**
@@ -69,7 +52,7 @@ public class Rectangle extends Poligon {
         double BD = this.vertices.get(1).distanceTo(this.vertices.get(3));
 
         if (!Helper.tolerantEquals(AC, BD))
-            Helper.ivExit(ERR_MSG);
+            Helper.ivExit(ERR_MSG());
     }
 
     /**
@@ -85,6 +68,11 @@ public class Rectangle extends Poligon {
         double DA = this.vertices.get(3).distanceTo(this.vertices.get(0));
 
         if (!Helper.tolerantEquals(AB, CD) || !Helper.tolerantEquals(BC, DA))
-            Helper.ivExit(ERR_MSG);
+            Helper.ivExit(ERR_MSG());
+    }
+
+    @Override
+    public String ERR_MSG() {
+        return "Retangulo:iv";
     }
 }

@@ -8,7 +8,6 @@ import geometry.SegmentoReta;
 import main.Helper;
 
 public class Poligon implements Shape {
-    protected final String ERR_MSG;
     protected List<Point> vertices;
     protected List<SegmentoReta> edges;
 
@@ -16,18 +15,14 @@ public class Poligon implements Shape {
      * Creates a Poligon from a list of {@link Point}.
      * <hr>
      * 
-     * @param pts     : a {@code List<Point>} representing the vertices of the
-     *                poligon.
-     * @param ERR_MSG : a {@link String} representing the error message that is
-     *                shown when the
-     *                invariates are violated.
+     * @param pts : a {@code List<Point>} representing the vertices of the
+     *            poligon.
      * 
      * @see SegmentoReta#checkInvariants()
      * @see #sizeCheck()
      * @see Helper#ivExit(String)
      */
-    public Poligon(List<Point> pts, String ERR_MSG) {
-        this.ERR_MSG = ERR_MSG; // I should try "override" on the next implementation
+    public Poligon(List<Point> pts) {
         this.vertices = pts;
         this.edges = new ArrayList<SegmentoReta>();
         sizeCheck();
@@ -42,21 +37,6 @@ public class Poligon implements Shape {
         } catch (Exception e) {
             Helper.ivExit(e.getMessage());
         }
-    }
-
-    /**
-     * Creates a Poligon from a list of {@link Point} and with "Poligono:iv" for
-     * error message.
-     * <hr>
-     * 
-     * @param pts : a {@code List<Point>} representing the vertices of the poligon.
-     * 
-     * @see #Poligon(List, String)
-     * @see #sizeCheck()
-     * @see Helper#ivExit(String)
-     */
-    public Poligon(List<Point> pts) {
-        this(pts, "Poligono:iv");
     }
 
     public List<SegmentoReta> edges() {
@@ -79,7 +59,7 @@ public class Poligon implements Shape {
      */
     protected void sizeCheck() {
         if (this.vertices.size() < 3)
-            Helper.ivExit(ERR_MSG);
+            Helper.ivExit(this.ERR_MSG());
     }
 
     /**
@@ -101,5 +81,10 @@ public class Poligon implements Shape {
         }
 
         return intersections.isEmpty() ? null : intersections;
+    }
+
+    @Override
+    public String ERR_MSG() {
+        return "Poligono:iv";
     }
 }

@@ -13,7 +13,6 @@ import main.Helper;
  * @inv radius > 0
  */
 public class Circle implements Shape {
-    private final String ERR_MSG = "Circulo:iv";
     private Point center;
     private double radius;
 
@@ -30,7 +29,7 @@ public class Circle implements Shape {
         this.radius = radius;
 
         if (radius < 1e-9)
-            Helper.ivExit(ERR_MSG);
+            Helper.ivExit(ERR_MSG());
     }
 
     public Point center() {
@@ -115,5 +114,10 @@ public class Circle implements Shape {
         }
 
         return intersections.isEmpty() ? null : intersections;
+    }
+
+    @Override
+    public String ERR_MSG() {
+        return "Circulo:iv";
     }
 }

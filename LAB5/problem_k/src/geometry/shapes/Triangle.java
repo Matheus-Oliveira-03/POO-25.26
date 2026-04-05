@@ -20,7 +20,7 @@ public class Triangle extends Poligon {
      * @see Helper#ivExit(String)
      */
     public Triangle(List<Point> pts) {
-        super(pts, "Triangulo:iv");
+        super(pts);
         colinearityCheck();
     }
 
@@ -34,7 +34,7 @@ public class Triangle extends Poligon {
     @Override
     protected void sizeCheck() {
         if (this.vertices.size() != 3)
-            Helper.ivExit(ERR_MSG);
+            Helper.ivExit(ERR_MSG());
     }
 
     /**
@@ -53,6 +53,11 @@ public class Triangle extends Poligon {
         double D = mainDiagonals - secondaryDiagonals;
 
         if (Helper.isZero(D))
-            Helper.ivExit(ERR_MSG);
+            Helper.ivExit(ERR_MSG());
+    }
+
+    @Override
+    public String ERR_MSG() {
+        return "Triangulo:iv";
     }
 }

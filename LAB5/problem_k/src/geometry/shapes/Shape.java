@@ -27,4 +27,6 @@ public interface Shape {
      * 
      */
     public List<Point> intersect(SegmentoReta sr);
+
+    public String ERR_MSG();
 }

@@ -22,7 +22,7 @@ public class Square extends Rectangle {
      * @see Helper#ivExit(String)
      */
     public Square(List<Point> pts) {
-        super(pts, "Quadrado:iv");
+        super(pts);
     }
 
     /**
@@ -35,7 +35,12 @@ public class Square extends Rectangle {
     protected void edgesCheck() {
         for (SegmentoReta edge : edges) {
             if (!Helper.tolerantEquals(edge.length(), edges.getFirst().length()))
-                Helper.ivExit(ERR_MSG);
+                Helper.ivExit(ERR_MSG());
         }
+    }
+
+    @Override
+    public String ERR_MSG() {
+        return "Quadrado:iv";
     }
 }
